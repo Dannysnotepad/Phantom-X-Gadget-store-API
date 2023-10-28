@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Phantom-X Gadget API Documentation</title>
+  <!--Styles-->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@700&family=Mooli&family=Roboto&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mooli', sans-serif;
+}
+body{
+  width: 100%vw;
+}
+header{
+  padding-top: 15px;
+  padding-left: 25px;
+  color: #4A4652;
+  font-weight: bold;
+  margin-bottom: 30px;
+  height: 55px;
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.15);
+}
+h1{
+  font-weight: bold;
+  font-size: 20px;
+}
+section{
+  padding: 15px;
+  color: #4A4652;
+  text-align: left;
+}
+a{
+  color: #4A4652;
+  font-weight: bold;
+}
+.h2{
+  margin: 10px;
+  margin-bottom: 15px;
+}
+.intro{
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #FAF7FF;
+}
+.intro h2 {
+  margin-bottom: 10px;
+}
+.howItWorks{
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #FAF7FF;
+}
+.howItWorks h2 {
+  margin-bottom: 10px;
+}
+.howItWorks h3{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.howItWorks p{
+  margin-bottom: 10px;
+}
+.howItWorks span{
+  color: #7A7B8A;
+  font-weight: bold;
+}
+.howItWorks .cat{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+.questions h2{
+  margin-bottom: 10px;
+}
+code{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Phantom-X Gadget</h1>
+  </header>
+  <section>
+    <h2 class="h2"><marquee>Welcome to Phantom-X Gadget: A Gadget store API for developers</marquee></h2>
+    <div class="intro">
+      <h2>What is Phantom-X Gadget API</h2>
+      <p>Phantom-X is an easy-to-use, versatile Gadget Store CRUD REST API packed with dummy data for developers to use in the simplest way possible, especially those learning the art of consuming APIs.</p>
+    </div>
+    <div class="howItWorks">
+      <h2>How Does it Work?</h2>
+      <p>A simple GET request can be used to fetch data from our API via a browser or CURL.</p>
+    </div>
+    
+    
+    <div class="howItWorks">
+      <h2>Creating / Adding Products:</h2>
+      <br>
+      <h3>You can add products by sending a <span>POST</span> request with the instructions below</h3>
+      <p>When adding a product, the header content-type must be <span><b>JSON</b></span> and the <span><b>JSON</b></span> sent through the body parameters must follow this order <span>id, img_url, item, category, description and price</span></p>
+      <p>For example</p>
+      <pre>
+        <code>
+  {
+  "id": "11",
+  "img_url": " ",
+  "item": "Honps Digital Watch",
+  "category": [
+  "lightweight",
+  "pokectfriendly",
+  "tech",
+  "digital watch"
+  ],
+  "description": "Digital wrist watch with sleek design and advance tech components",
+  "price": 50.9
+  }
+        </code>
+      </pre>
+    </div>
+    <div class="howItWorks">
+      <h2>Reading / Displaying Products:</h2>
+      <br>
+      <h3>Request Product by Category</h3>
+      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/category/{category}</p>
+      <p><span>Example:</span> https://phantom-X-gadget.vercel.app/api/products/category/pokectfriendly</p>
+      <p>Returns a products having the same or in that category requested, most of the time you get more than one products because they share that to category.</p>
+      <br>
+      <h3>Request Product by ID</h3>
+      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
+      <p><span>Example:</span> https://phantom-X-gadget.vercel.app/api/products/8</p>
+      <p>Returns a product with ID requested, current number of products in the database is <span>10</span>.</p>
+      <br>
+      <h3>Request Every Products</h3>
+      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products</p>
+      <p>This will compact all available data on in the Data base and send them as a JSON Object.</p>
+    </div>
+    <div class="howItWorks">
+      <h2>Updating Products</h2>
+      <br>
+      <h3>You can update products info by sending a <span>PUT</span> request to the url below and also specify the product you want to update through the <span>id</span>, and also the field you want to update.</h3>
+      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
+      <pre>
+              <code>
+        {
+          "price": 105
+        }
+              </code>
+            </pre>
+    </div>
+    <div class="howItWorks">
+      <h2>Deleting / Removing Products</h2>
+      <br>
+      <h3>You can delete products by sending a <span>DELETE</span> request followed buy the <span>id</span> of the product you want to delete</h3>
+      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
+    </div>
+    <div class="howItWorks">
+      <h2>DB Summary</h2>
+      <h3>For now our available categories are <span class="cat">reading</span>, <span class="cat">music</span>, <span class="cat">headphone</span>, <span class="cat">expensive</span>, <span class="cat">googles</span>, <span class="cat">lightweight</span>, <span class="cat">bluetooth</span>, <span class="cat">coding</span>, <span class="cat">gaming</span>, <span class="cat">pokectfriendly</span>, <span class="cat">setup</span>, <span class="cat">relaxation</span>, <span class="cat">creativity</span>, <span class="cat">powersaving</span>
+    </div>
+    <div class="questions">
+      <h2>Note:</h2>
+      <p>This API is still under development, so if any error is encountered, Contact the <a href="https://github.com/Dannysnotepad">Developer</a> on WhatsApp @2348025089292</p>
+    </div>
+  </section>
+  
+  <!--Javascript-->
+  <script>
+    let text = document.querySelector('.h2')
+setTimeout(() => {
+  document.querySelector('marquee').remove()
+  text.textContent = 'Welcome to Phantom-X Gadget: A Gadget store API for developers'
+},11000)
+
+  </script>
+</body>
+</html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
+
+  <body></body>
+</html>
