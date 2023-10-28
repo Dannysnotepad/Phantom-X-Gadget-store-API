@@ -9,6 +9,7 @@
   <!--Styles-->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Montserrat:wght@700&family=Mooli&family=Roboto&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap');
+    
 *{
   margin: 0;
   padding: 0;
@@ -132,24 +133,24 @@ code{
       <h2>Reading / Displaying Products:</h2>
       <br>
       <h3>Request Product by Category</h3>
-      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/category/{category}</p>
-      <p><span>Example:</span> https://phantom-X-gadget.vercel.app/api/products/category/pokectfriendly</p>
+      <p><span>URL:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/category/{category}</p>
+      <p><span>Example:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/category/pokectfriendly</p>
       <p>Returns a products having the same or in that category requested, most of the time you get more than one products because they share that to category.</p>
       <br>
       <h3>Request Product by ID</h3>
-      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
-      <p><span>Example:</span> https://phantom-X-gadget.vercel.app/api/products/8</p>
+      <p><span>URL:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/{id}</p>
+      <p><span>Example:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/8</p>
       <p>Returns a product with ID requested, current number of products in the database is <span>10</span>.</p>
       <br>
       <h3>Request Every Products</h3>
-      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products</p>
+      <p><span>URL:</span> https://phantom-x-gadget-store-api.onrender.com/api/products</p>
       <p>This will compact all available data on in the Data base and send them as a JSON Object.</p>
     </div>
     <div class="howItWorks">
       <h2>Updating Products</h2>
       <br>
       <h3>You can update products info by sending a <span>PUT</span> request to the url below and also specify the product you want to update through the <span>id</span>, and also the field you want to update.</h3>
-      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
+      <p><span>URL:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/{id}</p>
       <pre>
               <code>
         {
@@ -162,7 +163,7 @@ code{
       <h2>Deleting / Removing Products</h2>
       <br>
       <h3>You can delete products by sending a <span>DELETE</span> request followed buy the <span>id</span> of the product you want to delete</h3>
-      <p><span>URL:</span> https://phantom-X-gadget.vercel.app/api/products/{id}</p>
+      <p><span>URL:</span> https://phantom-x-gadget-store-api.onrender.com/api/products/{id}</p>
     </div>
     <div class="howItWorks">
       <h2>DB Summary</h2>
@@ -185,13 +186,4 @@ setTimeout(() => {
   </script>
 </body>
 </html>
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-  </head>
 
-  <body></body>
-</html>
